@@ -19,6 +19,7 @@
           fit="contain"
           :src="searchImg"
           :preview-src-list="[searchImg]"
+          referrerpolicy="no-referrer"
           lazy
         />
         <div class="flex-1 flex flex-col justify-center items-center">
