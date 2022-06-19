@@ -27,7 +27,8 @@
         </div>
       </div>
     </template>
-    <el-scrollbar class="w-full flex-1" v-if="show">
+    <!-- <el-scrollbar class="w-full flex-1" v-if="show" ref="scrollbarRef"> -->
+    <div class="w-full flex-1 overflow-y-scroll" v-if="show">
       <ul class="mr-4">
         <li
           v-for="(item, index) in resultList"
@@ -93,7 +94,8 @@
           </p>
         </li>
       </ul>
-    </el-scrollbar>
+    </div>
+    <!-- </el-scrollbar> -->
     <div
       v-else-if="fourOfour"
       class="w-full flex-1 flex flex-col justify-center items-center"
@@ -184,4 +186,15 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0003;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+</style>
