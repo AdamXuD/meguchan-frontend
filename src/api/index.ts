@@ -10,7 +10,7 @@ export function getPixivData(pid: number) {
 
 export function getPicsearchData(short: string) {
   return axios.get(
-    `http://${process.env.VUE_APP_MEGUCHAN_API}/picsearch/result`,
+    `https://${process.env.VUE_APP_MEGUCHAN_API}/picsearch/result`,
     {
       params: {
         key: short,
